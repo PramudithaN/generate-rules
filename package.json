@@ -1,0 +1,42 @@
+{
+  "name": "generate-rules",
+  "version": "1.0.0",
+  "description": "Universal intelligent AI agent rules generator for any codebase (AGENTS.md, GEMINI.md)",
+  "type": "module",
+  "main": "generate-rules.mjs",
+  "bin": {
+    "generate-rules": "./generate-rules.mjs"
+  },
+  "files": [
+    "generate-rules.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai",
+    "agents",
+    "rules",
+    "gemini",
+    "cursor",
+    "copilot",
+    "antigravity",
+    "agents-md",
+    "gemini-md",
+    "guidelines",
+    "code-generator",
+    "developer-tools"
+  ],
+  "author": "Pramuditha Nadun <pramudithanadun@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PramudithaN/generate-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PramudithaN/generate-rules/issues"
+  },
+  "homepage": "https://github.com/PramudithaN/generate-rules#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -47,7 +47,7 @@ function getValidatedDirectory(inputPath, fallbackDir) {
   return canonicalPath
 }
 
-const defaultRootDir = path.resolve(__dirname, '..')
+const defaultRootDir = process.cwd()
 const ROOT_DIR = getValidatedDirectory(process.argv[2], defaultRootDir)
 
 // ── Directory Scanner & Tree Visualizer ──────────────────────────────────────

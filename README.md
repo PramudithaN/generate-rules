@@ -41,49 +41,69 @@
 
 ## Installation and Usage
 
-### 1. Direct Execution via Node.js
+### 1. Instant Execution in Any Repository via `npx` (Zero Installation)
 
-Run the script directly on the current directory:
-
-```bash
-node generate-rules.mjs
-```
-
-Or target any external project directory:
+Run the generator inside any project repository directly from GitHub:
 
 ```bash
-node generate-rules.mjs /path/to/your/project
+npx github:PramudithaN/generate-rules
 ```
 
-### 2. Integration into Project Scripts
+Or target a specific project directory from anywhere:
 
-Place [`generate-rules.mjs`](file:///d:/Pramuditha/Dev%20projects/generate-rules/generate-rules.mjs) into your project's `scripts/` folder and add a script entry to `package.json`:
+```bash
+npx github:PramudithaN/generate-rules /path/to/target/project
+```
+
+### 2. Global CLI Installation
+
+Install the CLI globally on your machine to use `generate-rules` anywhere:
+
+```bash
+npm install -g github:PramudithaN/generate-rules
+```
+
+Once installed, run it inside any project folder:
+
+```bash
+generate-rules
+```
+
+### 3. Add as a Project Dependency
+
+Install it into an existing project:
+
+```bash
+npm install -D github:PramudithaN/generate-rules
+```
+
+Add a convenience script to `package.json`:
 
 ```json
 {
   "scripts": {
-    "generate:rules": "node scripts/generate-rules.mjs"
+    "generate:rules": "generate-rules"
   }
 }
 ```
 
-Execute the script whenever dependencies or project structure change:
+Run it whenever your dependencies or project structure change:
 
 ```bash
 npm run generate:rules
 ```
 
-### 3. Programmatic API (ES Modules)
+### 4. Programmatic API (ES Modules)
 
-Import and invoke the generator function within custom build scripts:
+Import and invoke the generator function within custom build scripts or tooling:
 
 ```javascript
-import { generateRules } from './generate-rules.mjs'
+import { generateRules } from 'generate-rules'
 
-// Generate rules for the current directory
+// Generate rules for the current working directory
 generateRules()
 
-// Or specify a custom root directory
+// Or specify a custom target directory
 generateRules('/path/to/target/project')
 ```
 
