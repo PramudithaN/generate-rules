@@ -7,8 +7,26 @@
  * Node/Express, NestJS, FastAPI, Python, Rust, Go, Three.js, Turborepo, etc.)
  * and dynamically crafts tailored, high-standard AGENTS.md and GEMINI.md guidelines.
  * 
- * Usage:
- *   node scripts/generate-rules.mjs [optional-target-path]
+ * Usage Options:
+ * 
+ * 1. Instant execution in any repository (No installation required):
+ *    npx github:PramudithaN/generate-rules
+ *    npx github:PramudithaN/generate-rules /path/to/target/project
+ * 
+ * 2. Global CLI command:
+ *    npm install -g github:PramudithaN/generate-rules
+ *    generate-rules
+ * 
+ * 3. Project devDependency:
+ *    npm install -D github:PramudithaN/generate-rules
+ *    npx generate-rules
+ * 
+ * 4. Direct Node execution:
+ *    node generate-rules.mjs [optional-target-path]
+ * 
+ * 5. Programmatic ES Module API:
+ *    import { generateRules } from 'generate-rules'
+ *    generateRules('/path/to/target/project')
  */
 
 import fs from 'node:fs'

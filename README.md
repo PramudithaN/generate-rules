@@ -1,9 +1,25 @@
 # Universal Intelligent AI Agent Rules Generator (`generate-rules`)
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-
 > An intelligent, zero-dependency Node.js CLI tool that automatically inspects any codebase and generates tailored, high-standard guidelines (`AGENTS.md` and `GEMINI.md`) for AI coding agents such as Antigravity, Gemini Code Assist, Cursor, GitHub Copilot, Claude Code, and OpenAI Codex.
+
+---
+
+## Quick Start for Any Project
+
+You or any collaborator can run this tool inside **any repository** in one command without installing anything:
+
+```bash
+npx github:PramudithaN/generate-rules
+```
+
+### What Happens Automatically:
+1. **Scans the Project**: Detects active languages, frameworks, UI component libraries, ORMs, state management, build tools, and test suites.
+2. **Generates Tailored Rules**: Creates `AGENTS.md` and `GEMINI.md` at the root of the project with architecture-specific coding standards, security rules, and verification runbooks.
+3. **Protects Git History**: Automatically appends generated rule files and template directories to `.gitignore`.
+
+### How AI Coding Agents Use the Output:
+- **Antigravity & Gemini Code Assist**: Automatically discover and ingest `GEMINI.md` and `AGENTS.md` as foundational system guidelines.
+- **Cursor, Claude Code & GitHub Copilot**: Parse `AGENTS.md` for project architecture, code conventions, security constraints, and testing runbooks.
 
 ---
 
@@ -39,39 +55,39 @@
 
 ---
 
-## Installation and Usage
+## All Ways to Run
 
-### 1. Instant Execution in Any Repository via `npx` (Zero Installation)
+### Method 1: Instant Execution via `npx` (Recommended)
 
-Run the generator inside any project repository directly from GitHub:
+Run directly inside any repository without installing:
 
 ```bash
 npx github:PramudithaN/generate-rules
 ```
 
-Or target a specific project directory from anywhere:
+Or target a specific directory from anywhere:
 
 ```bash
 npx github:PramudithaN/generate-rules /path/to/target/project
 ```
 
-### 2. Global CLI Installation
+### Method 2: Global CLI Installation
 
-Install the CLI globally on your machine to use `generate-rules` anywhere:
+Install globally on your machine to use `generate-rules` from any terminal:
 
 ```bash
 npm install -g github:PramudithaN/generate-rules
 ```
 
-Once installed, run it inside any project folder:
+Once installed, run inside any project folder:
 
 ```bash
 generate-rules
 ```
 
-### 3. Add as a Project Dependency
+### Method 3: Project `devDependencies` Integration
 
-Install it into an existing project:
+Install it into an existing repository:
 
 ```bash
 npm install -D github:PramudithaN/generate-rules
@@ -93,7 +109,15 @@ Run it whenever your dependencies or project structure change:
 npm run generate:rules
 ```
 
-### 4. Programmatic API (ES Modules)
+### Method 4: Direct Node Execution
+
+Run the standalone script file directly:
+
+```bash
+node generate-rules.mjs [optional-target-path]
+```
+
+### Method 5: Programmatic API (ES Modules)
 
 Import and invoke the generator function within custom build scripts or tooling:
 
