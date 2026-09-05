@@ -1,12 +1,12 @@
 # Universal Intelligent AI Agent Rules Generator (`generate-rules`)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success.svg)](#)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PramudithaN/generate-rules/pulls)
-[![GitHub Stars](https://img.shields.io/github/stars/PramudithaN/generate-rules?style=social)](https://github.com/PramudithaN/generate-rules/stargazers)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 
-An intelligent, zero-dependency Node.js CLI tool that automatically inspects any codebase and generates tailored, high-standard guidelines (`AGENTS.md` and `GEMINI.md`) for AI coding agents such as Antigravity, Gemini Code Assist, Cursor, GitHub Copilot, Claude Code, and OpenAI Codex.
+> An intelligent, zero-dependency Node.js CLI tool that automatically inspects any codebase and generates tailored, high-standard guidelines (`AGENTS.md` and `GEMINI.md`) for AI coding agents such as Antigravity, Gemini Code Assist, Cursor, GitHub Copilot, Claude Code, and OpenAI Codex.
 
 ---
 
