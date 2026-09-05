@@ -599,13 +599,13 @@ export function generateRules(rootDir = ROOT_DIR) {
 
     const outputPath = path.join(rootDir, outputName)
     fs.writeFileSync(outputPath, content, 'utf8')
-    console.log(`[generate-rules] ✨ Generated ${outputName} customized for ${info.projectName}`)
+    console.log(`[generate-rules] >> Generated ${outputName} customized for ${info.projectName}`)
   }
 
   // Ensure generated markdown files and templates are in .gitignore
   ensureGitignore(rootDir)
 
-  console.log(`[generate-rules] ✅ Completed AI agent rule generation successfully!`)
+  console.log(`[generate-rules] >>> Completed AI agent rule generation successfully!`)
 }
 
 // Run if invoked directly from CLI
