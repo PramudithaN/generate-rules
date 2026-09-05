@@ -1,5 +1,11 @@
 # Universal Intelligent AI Agent Rules Generator (`generate-rules`)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-339933?logo=node.js&logoColor=white)](package.json)
+[![Dependencies](https://img.shields.io/badge/Dependencies-0_External-success)](package.json)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-PramudithaN%2Fgenerate--rules-181717?logo=github&logoColor=white)](https://github.com/PramudithaN/generate-rules)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PramudithaN/generate-rules/pulls)
+
 > An intelligent, zero-dependency Node.js CLI tool that automatically inspects any codebase and generates tailored, high-standard guidelines (`AGENTS.md` and `GEMINI.md`) for AI coding agents such as Antigravity, Gemini Code Assist, Cursor, GitHub Copilot, Claude Code, and OpenAI Codex.
 
 ---
