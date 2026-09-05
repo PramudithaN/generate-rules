@@ -1,5 +1,11 @@
 # Universal Intelligent AI Agent Rules Generator (`generate-rules`)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success.svg)](#)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/PramudithaN/generate-rules/pulls)
+[![GitHub Stars](https://img.shields.io/github/stars/PramudithaN/generate-rules?style=social)](https://github.com/PramudithaN/generate-rules/stargazers)
+
 An intelligent, zero-dependency Node.js CLI tool that automatically inspects any codebase and generates tailored, high-standard guidelines (`AGENTS.md` and `GEMINI.md`) for AI coding agents such as Antigravity, Gemini Code Assist, Cursor, GitHub Copilot, Claude Code, and OpenAI Codex.
 
 ---
@@ -120,4 +126,4 @@ To customize the output format while maintaining dynamic variable substitution, 
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).
