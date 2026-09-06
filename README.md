@@ -28,14 +28,15 @@ npx github:PramudithaN/generate-rules
 
 ## Key Features
 
-- **Deep Codebase Inspection**: Automatically detects languages, runtimes, frameworks, state management libraries, ORMs, UI design systems, bundlers, and testing suites.
-- **Annotated Directory Mapping**: Generates clean visual tree representations of the project structure with architectural annotations.
-- **Tailored Coding Standards**: Emits framework-specific best practices, including Electron process separation and IPC security, Next.js Server/Client component boundaries, Three.js/R3F memory lifecycles, and strict TypeScript, Python, or Rust conventions.
-- **Zero-Vulnerability Security Guidelines**: Injects context isolation, sandboxing rules, IPC validation, environment variable safety, and Row-Level Security (RLS) enforcement based on active dependencies.
+- **Deep Codebase Inspection**: Automatically detects languages, runtimes, frameworks, state management libraries, ORMs, AI/LLM SDKs, UI design systems, bundlers, and testing suites.
+- **Annotated Directory Mapping**: Generates clean visual tree representations of the project structure with architectural annotations, with built-in symlink loop protection.
+- **Tailored Coding Standards**: Emits framework-specific best practices, including Electron process separation and IPC security, Next.js Server/Client component boundaries, Three.js/R3F memory lifecycles, and strict TypeScript, Python, Rust, or Go conventions.
+- **Zero-Vulnerability Security Guidelines**: Injects context isolation, sandboxing rules, IPC validation, network resilience / offline handling, cross-platform path safety, environment variable safety, and Row-Level Security (RLS) enforcement.
 - **Conventional Commits Specification**: Embeds standard commit conventions and scopes directly into the generated agent prompt.
-- **Dynamic Verification Runbook**: Builds repository-specific QA checklists (`npm run lint`, `npx tsc --noEmit`, `npm run build`, `npm test`) tailored to available `package.json` scripts and tools.
+- **Dynamic Verification Runbook**: Builds repository-specific QA checklists (`npm run lint`, `npx tsc --noEmit`, `npm run build`, `npm test`, `cargo check`, `go vet`) tailored to available project scripts and tools.
+- **CLI Flags & Dry-Run Mode**: Supports `--help`, `--version`, `--dry-run` (preview without writing), and `--verbose`.
 - **Custom Template Support**: Allows overriding the default output structure using local `templates/AGENTS.template.md` and `templates/GEMINI.template.md` files.
-- **Automated `.gitignore` Protection**: Automatically adds generated agent rule files and templates to `.gitignore`.
+- **Automated `.gitignore` Protection**: Automatically adds generated agent rule files and templates to `.gitignore` with regex-safe pattern matching.
 - **Zero External Dependencies**: Implemented in pure native Node.js (ES Modules, `node:fs`, `node:path`, `node:url`).
 
 ---
@@ -46,15 +47,16 @@ npx github:PramudithaN/generate-rules
 
 | Category | Detected Frameworks and Libraries |
 | :--- | :--- |
-| **Languages & Runtimes** | TypeScript, JavaScript, Python, Rust, Go |
-| **Desktop & Mobile** | Electron, Tauri, React Native, Expo |
-| **Full-Stack & Web Frameworks** | Next.js (App Router & Pages Router), Remix, Astro, Nuxt, Svelte / SvelteKit, Vue 3, Angular, SolidJS, React 18 |
-| **3D & Creative Tech** | Three.js, React Three Fiber (`@react-three/fiber`), Drei (`@react-three/drei`), PixiJS |
-| **UI & Styling** | Tailwind CSS, Shadcn UI, Material UI (MUI), Radix UI, Chakra UI, Ant Design, Emotion, Styled Components |
-| **State Management** | Zustand, Redux Toolkit, Jotai, TanStack Query (React Query), Pinia |
-| **Backend & ORMs** | NestJS, Express, Fastify, Hono, Prisma ORM, Drizzle ORM, Supabase, Firebase |
-| **Testing & Quality** | Vitest, Jest, Playwright, Cypress, ESLint |
-| **Bundlers & Monorepos** | Vite, Webpack, Turborepo, Electron Builder |
+| **Languages & Runtimes** | TypeScript, JavaScript, Python, Rust, Go, Java/Kotlin, C# / .NET, PHP, Ruby |
+| **Desktop & Mobile** | Electron, Tauri, React Native, Expo, Flutter |
+| **Full-Stack & Web Frameworks** | Next.js (App Router & Pages Router), Remix, Astro, Nuxt, Svelte / SvelteKit, Vue 3, Angular, SolidJS, Qwik, React |
+| **AI / LLM & Agentic SDKs** | Google Gen AI / Gemini SDK, OpenAI SDK, Anthropic Claude SDK, LangChain, Vercel AI SDK, LlamaIndex, Vector DBs |
+| **3D & Creative Tech** | Three.js, React Three Fiber (`@react-three/fiber`), Drei (`@react-three/drei`), PixiJS, Babylon.js |
+| **UI & Styling** | Tailwind CSS, Shadcn UI, Material UI (MUI), Radix UI, Chakra UI, Ant Design, Mantine, Emotion, Styled Components |
+| **State Management** | Zustand, Redux Toolkit, Jotai, TanStack Query (React Query), SWR, Pinia |
+| **Backend & ORMs** | NestJS, Express, Fastify, Hono, Koa, Prisma ORM, Drizzle ORM, TypeORM, Mongoose, Supabase, Firebase, Redis |
+| **Testing & Quality** | Vitest, Jest, Playwright, Cypress, ESLint, Biome |
+| **Bundlers & DevOps** | Vite, Webpack, Turborepo, Electron Builder, Docker |
 
 ---
 
@@ -120,6 +122,17 @@ Run the standalone script file directly:
 node generate-rules.mjs [optional-target-path]
 ```
 
+### CLI Options & Flags
+
+| Flag | Shorthand | Description |
+| :--- | :--- | :--- |
+| `--help` | `-h` | Display the help menu and usage examples |
+| `--version` | `-v` | Display the current version |
+| `--dry-run` | `-n` | Preview generated output without writing to disk |
+| `--verbose` | | Display detailed inspection logs during execution |
+
+---
+
 ### Method 5: Programmatic API (ES Modules)
 
 Import and invoke the generator function within custom build scripts or tooling:
@@ -130,8 +143,11 @@ import { generateRules } from 'generate-rules'
 // Generate rules for the current working directory
 generateRules()
 
-// Or specify a custom target directory
-generateRules('/path/to/target/project')
+// Or specify a custom target directory and options
+generateRules('/path/to/target/project', {
+  dryRun: false,
+  verbose: true
+})
 ```
 
 ---
