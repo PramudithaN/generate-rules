@@ -9,7 +9,7 @@
 
 ## Quick Start for Any Project
 
-You or any collaborator can run this tool inside **any repository** in one command without installing anything:
+Developers and engineering teams can execute this tool inside **any repository** with a single command without prior installation:
 
 ```bash
 npx github:PramudithaN/generate-rules
@@ -64,7 +64,7 @@ npx github:PramudithaN/generate-rules
 
 ### Method 1: Instant Execution via `npx` (Recommended)
 
-Run directly inside any repository without installing:
+Execute directly inside any repository without installation:
 
 ```bash
 npx github:PramudithaN/generate-rules
@@ -78,13 +78,13 @@ npx github:PramudithaN/generate-rules /path/to/target/project
 
 ### Method 2: Global CLI Installation
 
-Install globally on your machine to use `generate-rules` from any terminal:
+Install globally to use `generate-rules` across any terminal:
 
 ```bash
 npm install -g github:PramudithaN/generate-rules
 ```
 
-Once installed, run inside any project folder:
+Once installed, execute inside any project directory:
 
 ```bash
 generate-rules
@@ -92,7 +92,7 @@ generate-rules
 
 ### Method 3: Project `devDependencies` Integration
 
-Install it into an existing repository:
+Install into an existing repository:
 
 ```bash
 npm install -D github:PramudithaN/generate-rules
@@ -108,7 +108,7 @@ Add a convenience script to `package.json`:
 }
 ```
 
-Run it whenever your dependencies or project structure change:
+Execute the script whenever project dependencies or directory structures change:
 
 ```bash
 npm run generate:rules
@@ -187,3 +187,4 @@ To customize the output format while maintaining dynamic variable substitution, 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
