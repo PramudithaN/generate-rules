@@ -821,9 +821,9 @@ function ensureGitignore(rootDir, entries = ['AGENTS.md', 'GEMINI.md', 'template
     const newContent = normalized + (normalized.endsWith('\n') || normalized.length === 0 ? '' : '\n') + block
     try {
       fs.writeFileSync(gitignorePath, newContent, 'utf8')
-      console.log(`[generate-rules] 🛡️ Added to .gitignore: ${missing.join(', ')}`)
+      console.log(`[generate-rules] + Added to .gitignore: ${missing.join(', ')}`)
     } catch (err) {
-      console.warn(`[generate-rules] ⚠️ Could not update .gitignore: ${err.message}`)
+      console.warn(`[generate-rules] ! Could not update .gitignore: ${err.message}`)
     }
   }
 }
@@ -845,7 +845,7 @@ export function generateRules(targetDir = process.cwd(), options = {}) {
   const { dryRun = false, verbose = false } = options
 
   if (verbose || !dryRun) {
-    console.log(`[generate-rules] 🔍 Analyzing codebase at: ${rootDir}`)
+    console.log(`[generate-rules] ^-^ Analyzing codebase at: ${rootDir}`)
   }
 
   const info = analyzeCodebase(rootDir)
@@ -904,7 +904,7 @@ export function generateRules(targetDir = process.cwd(), options = {}) {
     } else {
       const outputPath = path.join(rootDir, outputName)
       fs.writeFileSync(outputPath, content, 'utf8')
-      console.log(`[generate-rules] >> Generated ${outputName} customized for ${info.projectName}`)
+      console.log(`[generate-rules] :> Generated ${outputName} customized for ${info.projectName}`)
     }
 
     generatedFiles.push(outputName)
@@ -971,7 +971,7 @@ function runCli() {
   try {
     generateRules(targetPath || process.cwd(), { dryRun, verbose })
   } catch (err) {
-    console.error(`\n[generate-rules] ❌ Error: ${err.message}\n`)
+    console.error(`\n[generate-rules] x Error: ${err.message}\n`)
     process.exit(1)
   }
 }
